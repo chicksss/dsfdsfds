@@ -7,17 +7,20 @@
 
     <title>MATT MATT</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
-
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -51,9 +54,30 @@
     ></div>
     <section id="cedarville-cursive-regular h-[100vh] ">
       <div class="mt-20">
-        <div class="flex flex-row p-3 gap-1 relative">
-          <div>
+        <div class="flex flex-row p-3 gap-1 relative " data-aos="fade-down">
+          <!-- <div>
             <img src="matt5.jpg" class="h-42 w-30" alt="" />
+          </div> -->
+          <style>
+            .crossfade {
+              position: relative;
+              height: 168px; /* Matches h-42 */
+              width: 120px; /* Matches w-30 */
+            }
+            .crossfade img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transition: opacity 0.5s ease-in-out;
+            }
+            .crossfade img.top:hover {
+              opacity: 0;
+            }
+          </style>
+
+          <div class="crossfade">
+            <img src="matttttt.JPG" class="h-42 w-30" />
+            <img src="matt5.jpg" class="h-42 w-30 top" />
           </div>
           <div>
             <img src="2.jpg" class="h-42 w-35" alt="" />
@@ -62,49 +86,65 @@
             <img src="3.jpg" class="h-42 w-35" alt="" />
           </div>
         </div>
-        <div class="flex flex-row text-center absolute text-white mt-[-90px]">
+        <div
+          class="flex flex-row text-center absolute text-white mt-[-90px]"
+          style="font-family: DynaPuff, system-ui"
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+        >
           <div>
-            <h1 class="h-42 w-30 text-6xl">𝓞</h1>
+            <h1 class="h-42 w-30 text-6xl">O</h1>
           </div>
           <div>
-            <h1 class="h-42 w-30 text-6xl">𝓷</h1>
+            <h1 class="h-42 w-30 text-6xl">n</h1>
           </div>
           <div>
-            <h1 class="h-42 w-30 text-6xl">𝓮</h1>
+            <h1 class="h-42 w-30 text-6xl">e</h1>
           </div>
         </div>
 
         <div>
-          <div class="w-90 m-auto grid px-8" style=" font-family: DynaPuff, system-ui;">
-            <div class="text-left">
+          <div
+            class="w-90 m-auto grid px-8"
+            style="font-family: DynaPuff, system-ui"
+          >
+            <div class="text-left"    data-aos="fade-right"
+          data-aos-easing="ease-in-out">
               <i>You are invited to </i>
             </div>
 
-            <div class="text-center">
+            <div class="text-center"    data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               <b class="text-[25px]">Timothy Matthew M. Ramos</b>
             </div>
 
-            <div class="text-right">
+            <div class="text-right"    data-aos="fade-left"
+          data-aos-easing="ease-in-out">
               <i> Birthday!! </i>
             </div>
           </div>
 
-          <div class="mt-[50px] " style=" font-family: DynaPuff, system-ui;">
+          <div class="mt-[50px]" style="font-family: DynaPuff, system-ui">
             <div class="text-center flex justify-center gap-5">
               <div class="text-xl grid justify-center">
-                <div class="flex gap-5">
+                <div class="flex gap-5"    data-aos="fade-down"
+          data-aos-easing="ease-in-out">
                   <p>APRIL</p>
                   <b class="text-2xl">| 01 |</b>
                   <div class="text-xl">
-                    <p>2026</p>
+                    <p>11am</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="m-auto justify-center flex mt-4" style=" font-family: DynaPuff, system-ui;">
-            <div id="countdown-container" class="flex gap-5 text-center">
+          <div
+            class="m-auto justify-center flex mt-4"
+            style="font-family: DynaPuff, system-ui"
+          >
+            <div id="countdown-container" class="flex gap-5 text-center"    data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               <div class="time-segment">
                 <span id="days">00</span>
                 <p>Days</p>
@@ -155,7 +195,7 @@
       />
     </section>
 
-    <section class="mt-40" style=" font-family: DynaPuff, system-ui;">
+    <section class="mt-40" style="font-family: DynaPuff, system-ui">
       <div class="text-center">
         <b class="text-[50px]">Venue</b>
       </div>
@@ -310,7 +350,7 @@
         </div>
       </div>
 
-      <div class="text-center" style=" font-family: DynaPuff, system-ui;">
+      <div class="text-center" style="font-family: DynaPuff, system-ui">
         <b class="text-[50px]">Pictures</b>
       </div>
 
@@ -328,7 +368,7 @@
       </div>
     </section>
 
-    <div class="text-2xl" style=" font-family: DynaPuff, system-ui;">
+    <div class="text-2xl" style="font-family: DynaPuff, system-ui">
       <section>
         <div>
           <img
@@ -349,46 +389,44 @@
                 were thinking of giving a gift, here are my gift ideas.
               </p>
 
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-lg"> 
-
-              <div class="pt-10 p-4 text-center">
-                <div class="flex justify-center">
-                  <img src="lampein.jpg" alt="" srcset="" />
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-lg">
+                <div class="pt-10 p-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="lampein.jpg" alt="" srcset="" />
+                  </div>
+                  <b class="mt-4">
+                    <p>Lampein Pants (medium)</p>
+                  </b>
                 </div>
-                <b class="mt-4">
-                  <p>Lampein Pants (medium)</p>
-                </b>
+
+                <div class="pt-10 p-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="bottle.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="pt-4">
+                    <b>Uni love feeding Bootle cleanser</b>
+                  </div>
+                </div>
+
+                <div class="pt-10 p-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="toys.jpg" alt="" srcset="" />
+                  </div>
+
+                  <div class="pt-4">
+                    <b>Educational toys</b>
+                  </div>
+                </div>
+
+                <div class="pt-10 p-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="monetary.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="pt-4">
+                    <b>Monetary gifts</b>
+                  </div>
+                </div>
               </div>
-
-              <div class="pt-10 p-4 text-center">
-                <div class="flex justify-center">
-                  <img src="bottle.jpg" alt="" srcset="" />
-                </div>
-               <div class="pt-4">
-                  <b>Uni love feeding Bootle cleanser</b>
-                </div>
-              </div>
-
-              <div class="pt-10 p-4 text-center">
-                <div class="flex justify-center">
-                  <img src="toys.jpg" alt="" srcset="" />
-                </div>
-              
-                 <div class="pt-4">
-                  <b>Educational toys</b>
-                </div>
-              </div>
-
-              <div class="pt-10 p-4 text-center">
-                <div class="flex justify-center">
-                  <img src="monetary.jpg" alt="" srcset="" />
-                </div>
-                 <div class="pt-4">
-                  <b>Monetary gifts</b>
-                </div>
-              </div>
-
-               </div>
 
               <p>
                 Just because we gave you ideas doesn't mean you are obliged to
@@ -429,7 +467,7 @@
       <section class="mt-20">
         <img
           src="woman.png"
-          class="absolute z-[1] h-40 w-40 mt-90 ml-[-40px]"
+          class="absolute z-[1] h-40 w-40 mt-98 ml-[-40px]"
           alt=""
           srcset=""
         />
@@ -455,29 +493,31 @@
             <b class="text-[40px] px-4 text-center"> Health Protocols</b>
           </div>
 
-          <div class=" grid px-4 gap-5">
-            <div class="grid justify-center gap-5">
-              <div>
-                <img src="kiss.png" alt="" />
+          <div class="flex justify-center">
+            <div class="grid px-4 gap-5 justify-center">
+              <div class="grid justify-center gap-5">
                 <div>
-                  <p>No kissing serene</p>
+                  <img src="kiss.png" alt="" />
+                  <div>
+                    <p>No kissing serene</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="grid justify-center p-5">
-              <div>
-                <img src="hands.png" alt="" />
+              <div class="grid justify-center p-5">
                 <div>
-                  <p>Sanitize your hand</p>
+                  <img src="hands.png" alt="" />
+                  <div>
+                    <p>Sanitize your hand</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="grid justify-center gap-5">
-              <div>
-                <img src="smoke.png" alt="" />
+              <div class="grid justify-center gap-5">
                 <div>
-                  <p class="text-center">No smoking</p>
+                  <img src="smoke.png" alt="" />
+                  <div>
+                    <p class="text-center">No smoking</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -524,5 +564,10 @@
         document.getElementById("countdown-container").innerHTML = "EXPIRED";
       }
     }, 1000);
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </html>
