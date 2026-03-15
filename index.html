@@ -46,19 +46,13 @@
       }
     </style>
   </head>
-  <body
-    class="bg-[url('bgg.jpg')] bg-cover bg-no-repeat bg-fixed text-black relative"
-  >
+  <body class="bg-[url('bgg.jpg')] bg-no-repeat bg-fixed text-black relative">
     <div class="absolute z-[-1]">
       <!-- <img src="frontnew.png" class="w-100 h-[50rem]" alt=""> -->
     </div>
     <section id="cedarville-cursive-regular h-[100vh]  ">
       <div class="">
-          <div
-          class="flex flex-row relative mb-[-10px]"
-          data-aos="fade-down "
-        
-        >
+        <div class="flex flex-row relative mb-[-10px]" data-aos="fade-down ">
           <div>
             <img src="cutetthor.png" class="h-20 w-50" alt="" />
           </div>
@@ -122,7 +116,7 @@
             </div>
 
             <div
-              class="text-center w-full "
+              class="text-center w-full"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
               data-aos-mirror="true"
@@ -141,6 +135,59 @@
               <i> Birthday!! </i>
             </div>
           </div>
+
+          <div class="px-6">
+            <div class="mt-[50px]" style="font-family: DynaPuff, system-ui">
+              <div class="text-center flex justify-center gap-5">
+                <div class="text-xl">
+                  <div
+                    class="flex gap-5"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                  >
+                    <p class="text-3xl">APRIL</p>
+
+                    <b class="text-5xl">|1|</b>
+                    <!-- <b class="text-2xl">| 01 |</b> -->
+                    <div class="text-3xl">
+                      <b>11am</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="text-center mt-4 text-2xl"
+              style="font-family: DynaPuff, system-ui"
+            >
+              <div
+                id="countdown-container"
+                class="flex justify-center gap-2 text-center"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out"
+              >
+                <div class="time-segment">
+                  <span id="days">00</span>
+                  <p>Days</p>
+                </div>
+                <div class="time-segment">
+                  <span id="hours">00</span>
+                  <p>Hours</p>
+                </div>
+                <div class="time-segment">
+                  <span id="minutes">00</span>
+                  <p>Minutes</p>
+                </div>
+                <div class="time-segment">
+                  <span id="seconds">00</span>
+                  <p>Seconds</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="mt-20">
           <img src="hoooooo.png" alt="" class="w-full" srcset="" />
@@ -157,85 +204,67 @@
 
     <!-- date -->
 
-    <section class="h-100 mt-50">
-      <div
-        class="flex justify-end relative"
-        style="font-family: DynaPuff, system-ui"
-      >
-        <div>
-          <div class="flex justify-center">
-            <b class="text-center text-5xl">SAVE THE DATE</b>
-          </div>
-          <div class="z-1 mr-40">
-            <div class="mt-[50px]">
-              <div class="text-center flex justify-center gap-5">
-                <div class="text-xl grid justify-center">
-                  <div
-                    class="grid gap-5"
-                    data-aos="fade-down"
-                    data-aos-easing="ease-in-out"
-                    data-aos-mirror="true"
-                    data-aos-once="false"
-                  >
-                    <p class="text-5xl">APRIL</p>
+    <section class="pt-20">
+      <style>
+        .envelope {
+          width: 200px;
+          height: 150px;
+          background: #e0d0b0;
+          position: relative;
+          cursor: pointer;
+          transition: 0.5s;
+        }
 
-                    <b class="text-5xl">1</b>
-                    <!-- <b class="text-2xl">| 01 |</b> -->
-                    <div class="text-5xl">
-                      <b>11am</b>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        /* The Flap */
+        .flap {
+          width: 0;
+          height: 0;
+          border-left: 100px solid transparent;
+          border-right: 100px solid transparent;
+          border-top: 80px solid #d0c0a0;
+          position: absolute;
+          top: 0;
+          transition: transform 0.5s;
+          transform-origin: top;
+        }
 
-            <div
-              class="mr-5 justify-center flex mt-4 text-2xl"
-              style="font-family: DynaPuff, system-ui"
-            >
-              <div
-                id="countdown-container"
-                class="flex gap-5 text-center"
-                data-aos="fade-up"
-                data-aos-easing="ease-in-out"
-              >
-                <div class="grid-cols-1 justify-center gap-4">
-                  <div class="flex gap-4 justify-center">
-                    <div class="time-segment">
-                      <span id="days">00</span>
-                      <p>Days</p>
-                    </div>
-                    <div class="time-segment">
-                      <span id="hours">00</span>
-                      <p>Hours</p>
-                    </div>
-                  </div>
+        /* When envelope is open */
+        .envelope.open .flap {
+          transform: rotateX(180deg);
+        }
 
-                  <div class="flex gap-4 justify-center">
-                    <div class="time-segment">
-                      <span id="minutes">00</span>
-                      <p>Minutes</p>
-                    </div>
-                    <div class="time-segment">
-                      <span id="seconds">00</span>
-                      <p>Seconds</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        .message {
+          position: absolute;
+          top: 20px;
+          left: 10px;
+          width: 180px;
+          background: white;
+          padding: 10px;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        .envelope.open .message {
+          opacity: 1;
+          top: -50px;
+        }
+      </style>
+
+<img src="groot.png" alt="">
+      <div class="bg-[url(naa.jpg)]  bg-cover  rounded-xl p-10"  style="font-family: DynaPuff, system-ui">
+        <div class="flex justify-center text-4xl">
+          <b>RSVP</b>
         </div>
-        <img
-          src="datee.png"
-          class="absolute z-[-1] mr-[-20px]"
-          alt=""
-          srcset=""
-        />
+<div class="flex justify-center mt-20">
+        <div class="envelope" onclick="this.classList.toggle('open')">
+          <div class="flap"></div>
+          <div class="message">Kindly ask you to send your RSVP on or before (date) so we can reserve your seat</div>
+        </div>
       </div>
+      </div>
+      
     </section>
 
-    <section class="mt-100" style="font-family: DynaPuff, system-ui">
+    <section class="mt-20" style="font-family: DynaPuff, system-ui">
       <div class="px-2 rounded-lg">
         <img src="bat.png" class="h-70 w-full" alt="" srcset="" />
         <div class="bg-[url('batttttt.jpg')] bg-cover px-2 py-2 rounded-xl">
